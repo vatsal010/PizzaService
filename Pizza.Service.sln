@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32428.217
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pizza.Service", "Pizza.Service\Pizza.Service.csproj", "{A68C82B8-6139-4431-9402-DF6B4045A4D3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pizza.Service", "Pizza.Service\Pizza.Service.csproj", "{A68C82B8-6139-4431-9402-DF6B4045A4D3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PizzaService.Test", "PizzaService.Test\PizzaService.Test.csproj", "{F5A66B4A-E071-4BD3-96BB-05238D1F4F31}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{A68C82B8-6139-4431-9402-DF6B4045A4D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A68C82B8-6139-4431-9402-DF6B4045A4D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A68C82B8-6139-4431-9402-DF6B4045A4D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5A66B4A-E071-4BD3-96BB-05238D1F4F31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5A66B4A-E071-4BD3-96BB-05238D1F4F31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5A66B4A-E071-4BD3-96BB-05238D1F4F31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5A66B4A-E071-4BD3-96BB-05238D1F4F31}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
