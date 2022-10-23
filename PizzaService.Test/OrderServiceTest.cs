@@ -13,28 +13,28 @@ namespace PizzaService.Test
         public void CreateOrder_SmallPizza_Test()
         {
             //Setup
-            var pizzaService = new Mock<IOrderService>();
+            var pizzaService = new OrderService();
 
             // Action
-            var result = pizzaService.Object.CreateOrder(GetOrder_Small_ExtraCheese_MockData());
+            var result = pizzaService.CreateOrder(GetOrder_Small_ExtraCheese_MockData());
 
             // Assert
             Assert.NotNull(result);
-            Assert.Equal(15, result.Prize);
+            Assert.Equal(16, result.Prize);
         }
 
         [Fact]
         public void CreateOrder_MediumPizza_Test()
         {
             //Setup
-            var pizzaService = new Mock<IOrderService>();
+            var pizzaService = new OrderService();
 
             // Action
-            var result = pizzaService.Object.CreateOrder(GetOrder_Medium_MockData());
+            var result = pizzaService.CreateOrder(GetOrder_Medium_MockData());
 
             // Assert
             Assert.NotNull(result);
-            Assert.Equal(15, result.Prize);
+            Assert.Equal(13, result.Prize);
         }
 
         private OrderRequest GetOrder_Small_ExtraCheese_MockData()
