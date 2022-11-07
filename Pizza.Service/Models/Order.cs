@@ -7,7 +7,7 @@ namespace Pizza.Service.Models
 {
     public class OrderRequest
     {
-        public Guid Id { get; set; }
+        public Guid? Id { get; set; }
         public float Prize { get; set; }
         public PizzaSize PizzaSize { get; set; }
         public PizzaSauce PizzaSauce { get; set; }

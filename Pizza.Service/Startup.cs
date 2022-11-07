@@ -27,6 +27,19 @@ namespace Pizza.Service
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddControllers().AddNewtonsoftJson();
+            services.AddCors();
+            // Default Policy
+            services.AddCors(options =>
+            {
+                options.AddDefaultPolicy(
+                    builder =>
+                    {
+                        builder.WithOrigins("https://localhost:44351", "http://localhost:4200")
+                                            .AllowAnyHeader()
+                                            .AllowAnyMethod();
+                    });
+            });
             services.AddScoped<IPizzaService, PizzaService>();
             services.AddScoped<IOrderService, OrderService>();
         }
@@ -38,6 +51,14 @@ namespace Pizza.Service
             {
                 app.UseDeveloperExceptionPage();
             }
+            app.UseCors();
+            app.UseCors(builder =>
+            {
+                builder
+                .AllowAnyOrigin()
+                .AllowAnyMethod()
+                .AllowAnyHeader();
+            });
 
             app.UseHttpsRedirection();
 
